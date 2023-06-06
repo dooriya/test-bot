@@ -1,0 +1,42 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+      {
+          "type": "TextBlock",
+          "text": "Select a team you wish to create an incident",
+          "weight": "Bolder",
+          "size": "Small",
+          "style": "heading",
+          "wrap": true
+      },
+      {
+          "type": "Input.ChoiceSet",
+          "choices": [
+              {
+                  "title": "Team 1",
+                  "value": "team1"
+              },
+              {
+                  "title": "Team 2",
+                  "value": "team2"
+              }
+          ],
+          "placeholder": "Select a team",
+          "id": "teamId"
+      },
+      {
+          "type": "ActionSet",
+          "actions": [
+              {
+                  "type": "Action.Execute",
+                  "title": "Submit",
+                  "verb": "teamForIncident",
+                  "fallback": "Action.Submit"
+              }
+          ]
+      }
+
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.4"
+}
